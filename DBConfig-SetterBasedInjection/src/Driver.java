@@ -10,7 +10,7 @@ public class Driver {
 		EmployeeDAO empdao = apc.getBean("empDAO",EmployeeDAO.class);
 		
 		DBConfig dbc = empdao.getDbconfig();
-		
+		System.out.println("Hi");
 		System.out.println(dbc.getDriverName());
 		System.out.println(dbc.getUrl());
 		System.out.println(dbc.getUserName());
