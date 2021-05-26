@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="custObj" class="Customer">
+		<constructor-arg index="0" value="101"/>
+		<constructor-arg index="1" value="Name"/>
+		<constructor-arg index="2" value="EmailId@email.com"/>
+		<constructor-arg index="3" value="1234567890"/>
+	</bean>
+	
+	<bean id="mem" class="MemberShip">
+		<constructor-arg index="0" value="001"/>
+		<constructor-arg index="1" value="Permanent"/>
+		<constructor-arg index="2" value="1000"/>
+		<constructor-arg index="3" ref="custObj"/>
+	</bean>
+	
+</beans>
